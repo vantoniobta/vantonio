@@ -2,11 +2,12 @@
 
 function getNextColorClass() {
     var themePrefix = "theme-base-"
-    var colors = ['08', // Red
+    var colors = [
+                  '08', // Red
                   '09', // Orange
                 //'0a', // Yellow
                   '0b', // Green
-                  '0c', // Cyan
+                 // '0c', // Cyan
                   '0d', // Blue
                 //  '0e', // Magenta
                   //'0f', // Brown
