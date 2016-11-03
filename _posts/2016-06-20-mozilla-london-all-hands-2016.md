@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "Mozilla London All Hands 2016"
+title: "testing 3"
 excerpt_separator: <!--end-excerpt-->
 ---
 
 Last week, all of Mozilla met in London for a whirlwind tour from TARDIS to TaskCluster, from BBC1 to e10s, from Regent Park to the release train, from Paddington to Positron. As an [Outreachy intern]({% post_url 2016-05-23-outreachy-what-how-why %}), I felt incredibly lucky to be part of this event, which gave me a chance to get to know Mozilla, my team, and the other interns much better.  It was a jam-packed work week of talks, meetings, team events, pubs, and parties, and it would be impossible to blog about all of the fun, fascinating, and foxy things I learned and did. But I can at least give you some of the highlights! Or, should I say, *Who*-lights? (Be warned, that is not the last pun you will encounter here today.)
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Foxy, the TARDIS, and espionage in the park? All in a day&#39;s work at <a href="https://twitter.com/hashtag/MozLondon?src=hash">#MozLondon</a>! <a href="https://t.co/QPWdPRnJHY">pic.twitter.com/QPWdPRnJHY</a></p>&mdash; Anjana Vakil (@AnjanaVakil) <a href="https://twitter.com/AnjanaVakil/status/742853826428997632">June 14, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="es"><p lang="und" dir="ltr"><a href="https://t.co/Tentx02jNh">pic.twitter.com/Tentx02jNh</a></p>&mdash; Valentin Antonio Bta (@vantonio_) <a href="https://twitter.com/vantonio_/status/772163640258535425">3 de septiembre de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
 <!--end-excerpt-->
 
