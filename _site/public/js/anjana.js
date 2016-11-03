@@ -8,8 +8,8 @@ function getNextColorClass() {
                   '0b', // Green
                   '0c', // Cyan
                   '0d', // Blue
-                  '0e', // Magenta
-                  '0f', // Brown
+                //  '0e', // Magenta
+                  //'0f', // Brown
     ];
 
     var currentClass = document.body.className
