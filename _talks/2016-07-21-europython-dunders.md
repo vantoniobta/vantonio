@@ -1,6 +1,6 @@
 ---
-title: "Using and abusing Python's double-underscore methods and attributes"
-event: "EuroPython"
-event-url: "https://ep2016.europython.eu/conference/talks/using-and-abusing-pythons-double-underscore-methods-and-attributes"
-location: "Bilbao, Spain"
+title: "Products Designer Canvas for Magento(Open Source)"
+event: "Doter Group"
+event-url: "http://doter.mx/"
+location: "Monterrey ,Nuevo León, Mexico"
 ---

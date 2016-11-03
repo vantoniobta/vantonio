@@ -12,13 +12,14 @@ Fabric provides interactive object model on top of canvas element
 
 <!--/excerpt-->
 
-## Wait, what's Marionette again?
+## Test Using HTML5, Magento and Fabricjs.
 
-Quick recap from [Act I]({% post_url 2016-07-08-marionette-act-i-automation %}):
+<!-- Quick recap from [Act I]({% post_url 2016-07-08-marionette-act-i-automation %}):
+ -->
+> [-_-]
 
-> [Marionette](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette) refers to a suite of tools for automated testing of Mozilla browsers.
-
-In that post, we [saw]({% post_url 2016-07-08-marionette-act-i-automation %}#how-do-marionettes-server-and-client-automate-the-browser) how the Marionette automation framework lets us control the Gecko browser engine (our "puppet"), thanks to a *server* component built into Gecko (the puppet's "strings") and a *client* component (a "handle" for the puppeteer) that gives us a simple Python API to talk to the server and thus control the browser. But why do we need to automate the browser in the first place? What good does it do us?
+<blockquote class="twitter-tweet" data-lang="es"><p lang="und" dir="ltr"><a href="https://t.co/Tentx02jNh">pic.twitter.com/Tentx02jNh</a></p>&mdash; Valentin Antonio Bta (@vantonio_) <a href="https://twitter.com/vantonio_/status/772163640258535425">3 de septiembre de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Well, one thing it's great for is testing. Indulge me in a brief return to my puppet metaphor from last time, won't you? If the *automation* side of Marionette gives us strings and a handle that turn the browser into our puppet, the *testing* side of Marionette gives that puppet a reason for being, by letting it perform: it sets up a stage for the puppet to dance on, tell it to carry out a given performance, write a review of that performance, and tear down the stage again.
 

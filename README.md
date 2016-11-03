@@ -1,2 +1,2 @@
-# vantonio.github.io
+# vantonio
 Personal blog
