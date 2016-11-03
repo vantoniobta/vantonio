@@ -1,0 +1,42 @@
+# Dependencies
+highlighter:      rouge
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+# Permalinks
+permalink:              /blog/:categories/:title/
+# permalink:            blog/:categories/:year/:month/:day/:title/
+
+# Setup
+title:            'Valentin Antonio Bautista'
+name:             'Valentin Antonio Bautista'
+#tagline:          ''
+description:      'I fell in love with software development_'
+baseurl:
+# blogurl:          /blog/
+
+# Assets
+images:         '/img'
+pdfs:           '/pdf'
+
+author:
+  name:           'Valentin Antonio Bautista'
+  url:             valentin.github.io
+  email:          'vale.residencia@gmail.com'
+  github:         'https://github.com/vantoniobta'
+  facebook:       'https://www.facebook.com/valentin.antoniobautista'
+  twitter:        'https://twitter.com/vantonio_'
+  googleplus:     ''
+paginate:         3
+# paginate_path:    "/blog/page:num/"
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/vantoniobta
+
+# Collections
+collections:
+  - projects
+  - talks
+
