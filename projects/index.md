@@ -14,10 +14,7 @@ title: Projects
     <span class="project-tagline post-date">
         {{ project.tagline }}
     </span>
-
     {{ project.content }}
-
-
   </div>
   {% endfor %}
 </div>

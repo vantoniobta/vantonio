@@ -12,7 +12,7 @@ title:            'Valentin Antonio Bautista'
 name:             'Valentin Antonio Bautista'
 #tagline:          ''
 description:      'I fell in love with software development_'
-baseurl:
+baseurl:           'https://vantoniobta.github.io'
 # blogurl:          /blog/
 
 # Assets
@@ -31,9 +31,8 @@ paginate:         3
 # paginate_path:    "/blog/page:num/"
 # Custom vars
 version:          2.1.0
-
 github:
-  repo:           https://github.com/vantoniobta
+  repo:          https://github.com/vantoniobta/vantonio.git
 
 # Collections
 collections:
