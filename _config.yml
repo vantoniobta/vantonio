@@ -32,7 +32,7 @@ paginate:         3
 # Custom vars
 version:          2.1.0
 github:
-  repo:          https://github.com/vantoniobta/vantonio
+  repo:          https://github.com/vantoniobta/vantonio.git
 
 # Collections
 collections:
