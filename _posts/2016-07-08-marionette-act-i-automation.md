@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Marionette, Act I: We've got Firefox on a string"
+title: "Testing 2"
 excerpt_separator: "<!--/excerpt-->"
 ---
 
