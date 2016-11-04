@@ -116,7 +116,7 @@
   <h1 class="post-title"><p>Fabric.js is a powerful and simple Javascript HTML5 canvas library</p>
 </h1>
   
-  <span class="post-date">22 Aug 2016</span>
+  <span class="post-date">04 Nov 2016</span>
   <p>Fabric provides interactive object model on top of canvas element
 <a href="http://fabricjs.com/">Fabric</a> also has SVG-to-canvas (and canvas-to-SVG) parser</p>
 
@@ -227,7 +227,7 @@
 
 <p>So actually, it’s the “test runner” that does the brunt of the work of a test harness here. Perhaps for that reason, the names “Marionette Test Harness” and “Marionette Test Runner” sometimes seem to be used interchangeably, which I for one found quite confusing at first.</p>
 
-<p>Anyway, the test runner that <code class="highlighter-rouge">MarionetteHarness</code> makes use of is the <code class="highlighter-rouge">MarionetteTestRunner</code> class defined in <a href="https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runtests.py#18"><code class="highlighter-rouge">runtests.py</code></a>, but that’s really just a little wrapper around <code class="highlighter-rouge">BaseMarionetteTestRunner</code> from <a href="https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runner/base.py#491"><code class="highlighter-rouge">harness/marionette/runner/base.py</code></a>, which is where the magic happens – and also where I’ve spent most of my time for my <a href="/blog/outreachy-what-how-why/">Outreachy</a> <a href="/blog/outreachy-halftime-ish-update/">internship</a>, but more on that later. For now let’s check out the runner!</p>
+<p>Anyway, the test runner that <code class="highlighter-rouge">MarionetteHarness</code> makes use of is the <code class="highlighter-rouge">MarionetteTestRunner</code> class defined in <a href="https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runtests.py#18"><code class="highlighter-rouge">runtests.py</code></a>, but that’s really just a little wrapper around <code class="highlighter-rouge">BaseMarionetteTestRunner</code> from <a href="https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runner/base.py#491"><code class="highlighter-rouge">harness/marionette/runner/base.py</code></a>, which is where the magic happens – and also where I’ve spent most of my time for my <a href="/blog/outreachy-what-how-why/">Outreachy</a> <a href="/blog/testing2/">internship</a>, but more on that later. For now let’s check out the runner!</p>
 
 <h3 id="how-does-marionettes-test-runner-work">How does Marionette’s test runner work?</h3>
 
@@ -343,7 +343,7 @@
 <p><img src="http://media1.popsugar-assets.com/files/thumbor/mQHBZmHnmyaKD5KDQ3Pczk6iM4E/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/07/21/936/n/1922283/2213f04074cccfc3_raw/i/When-You-Realize-Youre-Getting-Security-Deposit-Back-From-Your-Lease.gif" alt="&quot;Oh my god&quot; (GIF from the film &quot;Clueless&quot;)" /></p>
 <p class="credit"><em>Clueless</em> via <a href="http://www.popsugar.com/entertainment/Clueless-Movie-GIFs-37943154">POPSUGAR</a></p>
 
-<p>And that’s what I’ve been doing this summer for my <a href="https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner">Outreachy project</a>: working on the tests for the Marionette test harness, otherwise known as the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/Developer_setup#Marionette_Harness_Unit_Tests">Marionette harness (unit) tests</a>. I wrote a bit about what I’ve been up to in my <a href="/blog/outreachy-halftime-ish-update/">previous post</a>, but in my next and final Outreachy post, I’ll explain in more detail what the harness tests do, how we run them in automation, and what improvements I’ve made to them during my time as a Mozilla contributor.</p>
+<p>And that’s what I’ve been doing this summer for my <a href="https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner">Outreachy project</a>: working on the tests for the Marionette test harness, otherwise known as the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/Developer_setup#Marionette_Harness_Unit_Tests">Marionette harness (unit) tests</a>. I wrote a bit about what I’ve been up to in my <a href="/blog/testing2/">previous post</a>, but in my next and final Outreachy post, I’ll explain in more detail what the harness tests do, how we run them in automation, and what improvements I’ve made to them during my time as a Mozilla contributor.</p>
 
 <p>Stay tuned!</p>
 
@@ -373,8 +373,18 @@
     
       <li>
         <h3>
-          <a href="/blog/outreachy-halftime-ish-update/">
-            <p>testing 1</p>
+          <a href="/blog/testing/">
+            <p>testing</p>
+
+            <small>03 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/testing2/">
+            <p>testing2</p>
 
             <small>02 Aug 2016</small>
           </a>
@@ -387,16 +397,6 @@
             <p>Testing 2</p>
 
             <small>08 Jul 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/blog/mozilla-london-all-hands-2016/">
-            <p>testing 3</p>
-
-            <small>20 Jun 2016</small>
           </a>
         </h3>
       </li>

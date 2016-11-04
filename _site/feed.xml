@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-11-04T12:02:22-07:00</updated><id>/</id><title>Valentin Antonio Bautista</title><subtitle>I fell in love with software development_</subtitle><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><entry><title>Fabric.js is a powerful and simple Javascript HTML5 canvas library</title><link href="/blog/marionette-act-ii-testing/" rel="alternate" type="text/html" title="Fabric.js is a powerful and simple Javascript HTML5 canvas library" /><published>2016-08-22T00:00:00-07:00</published><updated>2016-08-22T00:00:00-07:00</updated><id>/blog/marionette-act-ii-testing</id><content type="html" xml:base="/blog/marionette-act-ii-testing/">&lt;p&gt;Fabric provides interactive object model on top of canvas element
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-11-04T14:10:06-07:00</updated><id>/</id><title>Valentin Antonio Bautista</title><subtitle>I fell in love with software development_</subtitle><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><entry><title>Fabric.js is a powerful and simple Javascript HTML5 canvas library</title><link href="/blog/fbjs/" rel="alternate" type="text/html" title="Fabric.js is a powerful and simple Javascript HTML5 canvas library" /><published>2016-11-04T00:00:00-07:00</published><updated>2016-11-04T00:00:00-07:00</updated><id>/blog/fbjs</id><content type="html" xml:base="/blog/fbjs/">&lt;p&gt;Fabric provides interactive object model on top of canvas element
 &lt;a href=&quot;http://fabricjs.com/&quot;&gt;Fabric&lt;/a&gt; also has SVG-to-canvas (and canvas-to-SVG) parser&lt;/p&gt;
 
 &lt;!-- Welcome back to my post series on the [Marionette](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette) project! In [Act I](/blog/marionette-act-i-automation/), we looked into Marionette's automation framework for Gecko, the engine behind the Firefox browser. Here in Act II, we'll take a look at a complementary side of the Marionette project: the testing framework that helps us run tests using our Marionette-animated browser, aka the [Marionette test harness](https://developer.mozilla.org/en-US/docs/Marionette_Test_Runner). If -- like me at the start of my [Outreachy internship](/blog/outreachy-what-how-why/) -- you're [clueless](https://en.wikipedia.org/wiki/Clueless_(film)) about test harnesses, or the Marionette harness in particular, and want to fix that, you're in the right place! --&gt;
@@ -108,7 +108,7 @@
 
 &lt;p&gt;So actually, it’s the “test runner” that does the brunt of the work of a test harness here. Perhaps for that reason, the names “Marionette Test Harness” and “Marionette Test Runner” sometimes seem to be used interchangeably, which I for one found quite confusing at first.&lt;/p&gt;
 
-&lt;p&gt;Anyway, the test runner that &lt;code class=&quot;highlighter-rouge&quot;&gt;MarionetteHarness&lt;/code&gt; makes use of is the &lt;code class=&quot;highlighter-rouge&quot;&gt;MarionetteTestRunner&lt;/code&gt; class defined in &lt;a href=&quot;https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runtests.py#18&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;runtests.py&lt;/code&gt;&lt;/a&gt;, but that’s really just a little wrapper around &lt;code class=&quot;highlighter-rouge&quot;&gt;BaseMarionetteTestRunner&lt;/code&gt; from &lt;a href=&quot;https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runner/base.py#491&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;harness/marionette/runner/base.py&lt;/code&gt;&lt;/a&gt;, which is where the magic happens – and also where I’ve spent most of my time for my &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;Outreachy&lt;/a&gt; &lt;a href=&quot;/blog/outreachy-halftime-ish-update/&quot;&gt;internship&lt;/a&gt;, but more on that later. For now let’s check out the runner!&lt;/p&gt;
+&lt;p&gt;Anyway, the test runner that &lt;code class=&quot;highlighter-rouge&quot;&gt;MarionetteHarness&lt;/code&gt; makes use of is the &lt;code class=&quot;highlighter-rouge&quot;&gt;MarionetteTestRunner&lt;/code&gt; class defined in &lt;a href=&quot;https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runtests.py#18&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;runtests.py&lt;/code&gt;&lt;/a&gt;, but that’s really just a little wrapper around &lt;code class=&quot;highlighter-rouge&quot;&gt;BaseMarionetteTestRunner&lt;/code&gt; from &lt;a href=&quot;https://dxr.mozilla.org/mozilla-central/rev/3ba5426a03b495b6417fffb872d42874edb80855/testing/marionette/harness/marionette/runner/base.py#491&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;harness/marionette/runner/base.py&lt;/code&gt;&lt;/a&gt;, which is where the magic happens – and also where I’ve spent most of my time for my &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;Outreachy&lt;/a&gt; &lt;a href=&quot;/blog/testing2/&quot;&gt;internship&lt;/a&gt;, but more on that later. For now let’s check out the runner!&lt;/p&gt;
 
 &lt;h3 id=&quot;how-does-marionettes-test-runner-work&quot;&gt;How does Marionette’s test runner work?&lt;/h3&gt;
 
@@ -224,7 +224,7 @@
 &lt;p&gt;&lt;img src=&quot;http://media1.popsugar-assets.com/files/thumbor/mQHBZmHnmyaKD5KDQ3Pczk6iM4E/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/07/21/936/n/1922283/2213f04074cccfc3_raw/i/When-You-Realize-Youre-Getting-Security-Deposit-Back-From-Your-Lease.gif&quot; alt=&quot;&amp;quot;Oh my god&amp;quot; (GIF from the film &amp;quot;Clueless&amp;quot;)&quot; /&gt;&lt;/p&gt;
 &lt;p class=&quot;credit&quot;&gt;&lt;em&gt;Clueless&lt;/em&gt; via &lt;a href=&quot;http://www.popsugar.com/entertainment/Clueless-Movie-GIFs-37943154&quot;&gt;POPSUGAR&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;And that’s what I’ve been doing this summer for my &lt;a href=&quot;https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner&quot;&gt;Outreachy project&lt;/a&gt;: working on the tests for the Marionette test harness, otherwise known as the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/Developer_setup#Marionette_Harness_Unit_Tests&quot;&gt;Marionette harness (unit) tests&lt;/a&gt;. I wrote a bit about what I’ve been up to in my &lt;a href=&quot;/blog/outreachy-halftime-ish-update/&quot;&gt;previous post&lt;/a&gt;, but in my next and final Outreachy post, I’ll explain in more detail what the harness tests do, how we run them in automation, and what improvements I’ve made to them during my time as a Mozilla contributor.&lt;/p&gt;
+&lt;p&gt;And that’s what I’ve been doing this summer for my &lt;a href=&quot;https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner&quot;&gt;Outreachy project&lt;/a&gt;: working on the tests for the Marionette test harness, otherwise known as the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/Developer_setup#Marionette_Harness_Unit_Tests&quot;&gt;Marionette harness (unit) tests&lt;/a&gt;. I wrote a bit about what I’ve been up to in my &lt;a href=&quot;/blog/testing2/&quot;&gt;previous post&lt;/a&gt;, but in my next and final Outreachy post, I’ll explain in more detail what the harness tests do, how we run them in automation, and what improvements I’ve made to them during my time as a Mozilla contributor.&lt;/p&gt;
 
 &lt;p&gt;Stay tuned!&lt;/p&gt;
 
@@ -245,7 +245,105 @@
 &lt;p&gt;&lt;a href=&quot;#a2&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;b id=&quot;f3&quot;&gt;3&lt;/b&gt; If you think distinguishing &lt;code class=&quot;highlighter-rouge&quot;&gt;run_tests&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;run_test_sets&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;run_test_set&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;run_test&lt;/code&gt; is confusing, I wholeheartedly agree with you! But best get used to it; working on the Marionette test harness involves developing an eagle-eye for plurals in method names (we’ve also got &lt;code class=&quot;highlighter-rouge&quot;&gt;_add_tests&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;add_test&lt;/code&gt;). &lt;a href=&quot;#a3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;</content><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><summary>Fabric provides interactive object model on top of canvas element
-Fabric also has SVG-to-canvas (and canvas-to-SVG) parser</summary></entry><entry><title>testing 1</title><link href="/blog/outreachy-halftime-ish-update/" rel="alternate" type="text/html" title="testing 1" /><published>2016-08-02T00:00:00-07:00</published><updated>2016-08-02T00:00:00-07:00</updated><id>/blog/outreachy-halftime-ish-update</id><content type="html" xml:base="/blog/outreachy-halftime-ish-update/">&lt;p&gt;It feels like yesterday that I &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;started my Outreachy internship&lt;/a&gt;, but it was actually over 2 months ago! For the last couple of weeks I’ve been on Outreachy hiatus because of &lt;a href=&quot;https://ep2016.europython.eu/en/&quot;&gt;EuroPython&lt;/a&gt;, moving from &lt;a href=&quot;https://goo.gl/maps/Rp7qp5Dvg5C2&quot;&gt;Saarbrücken to Berlin&lt;/a&gt;, and my mentor being on vacation. Now I’m back, with 6 weeks left in my internship! So it seems like a good moment to check in and reflect on how things have been going so far, and what’s in store for the rest of my time as an Outreachyee.&lt;/p&gt;
+Fabric also has SVG-to-canvas (and canvas-to-SVG) parser</summary></entry><entry><title>testing</title><link href="/blog/testing/" rel="alternate" type="text/html" title="testing" /><published>2016-11-03T00:00:00-07:00</published><updated>2016-11-03T00:00:00-07:00</updated><id>/blog/testing</id><content type="html" xml:base="/blog/testing/">&lt;p&gt;It feels like yesterday that I &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;started my Outreachy internship&lt;/a&gt;, but it was actually over 2 months ago! For the last couple of weeks I’ve been on Outreachy hiatus because of &lt;a href=&quot;https://ep2016.europython.eu/en/&quot;&gt;EuroPython&lt;/a&gt;, moving from &lt;a href=&quot;https://goo.gl/maps/Rp7qp5Dvg5C2&quot;&gt;Saarbrücken to Berlin&lt;/a&gt;, and my mentor being on vacation. Now I’m back, with 6 weeks left in my internship! So it seems like a good moment to check in and reflect on how things have been going so far, and what’s in store for the rest of my time as an Outreachyee.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-have-i-been-up-to&quot;&gt;What have I been up to?&lt;/h2&gt;
+
+&lt;h3 id=&quot;learning-how-to-do-the-work&quot;&gt;Learning how to do the work&lt;/h3&gt;
+
+&lt;p&gt;In the rather involved application process for Outreachy, I already had to spend quite a bit of time figuring out the process for making even the tiniest contribution to the Mozilla codebase. But obviously one can’t learn everything there is to know about a project within a couple of weeks, so a good chunk of my Outreachy time so far was spent on getting better acquainted with:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The tools&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;I’ve already written about my learning experiences with &lt;a href=&quot;/blog/warming-up-to-mercurial/&quot;&gt;Mercurial&lt;/a&gt;, but there were a lot of other components of the Mozilla development process that I had to learn about (and am still learning about), such as &lt;a href=&quot;https://bugzilla.mozilla.org/&quot;&gt;Bugzilla&lt;/a&gt;, &lt;a href=&quot;http://mozilla-version-control-tools.readthedocs.io/en/latest/mozreview.html&quot;&gt;MozReview&lt;/a&gt;, &lt;a href=&quot;https://wiki.mozilla.org/EngineeringProductivity/Projects/Treeherder&quot;&gt;Treeherder&lt;/a&gt;, &lt;a href=&quot;https://wiki.mozilla.org/ReleaseEngineering/TryServer&quot;&gt;Try&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/mach&quot;&gt;Mach&lt;/a&gt;…
+Then, since the project I’m working focuses on testing, I had to grok things like &lt;a href=&quot;http://docs.pytest.org/en/latest/&quot;&gt;Pytest&lt;/a&gt; and &lt;a href=&quot;https://docs.python.org/3/library/unittest.mock.html&quot;&gt;Mock&lt;/a&gt;. Since most everything I’m doing is in Python, I’ve also been picking up useful Python tidbits here and there.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The project&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;My internship project, &lt;a href=&quot;https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner&quot;&gt;“Test-driven refactoring of Marionette’s Python test runner”&lt;/a&gt;, relates to a component of the Marionette project, which encompasses a lot of moving parts. Even figuring out what Marionette is, what components it comprises, how these interrelate, and which of them I need to know about, was a non-trivial task. That’s why I’m writing a couple of posts about the project itself - &lt;a href=&quot;/blog/marionette-act-i-automation/&quot;&gt;one down&lt;/a&gt;, one to go - to crystallize what I’ve learned and hopefully make it a little easier for other people to get through the what-even-is-it steps that I’ve been going through. This post is a sort of “intermission”, so stay tuned for my upcoming post on the Marionette test runner and harness!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;doing-the-work&quot;&gt;Doing the work&lt;/h3&gt;
+
+&lt;p&gt;Of course, there’s a reason I’ve been trying to wrap my head around all the stuff I just mentioned: so that I can actually do this project! So what is the actual work I’ve been doing, i.e. my overall contribution to Mozilla as an Outreachy intern?&lt;/p&gt;
+
+&lt;p&gt;Well, to quote the &lt;a href=&quot;https://wiki.mozilla.org/Outreachy#Test-driven_Refactoring_of_Marionette.27s_Python_Test_Runner&quot;&gt;project description&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;we’re testing the thing that runs Firefox tests&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The “thing” is the Marionette test runner, a tool written in Python that allows us to run tests that make use of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette&quot;&gt;Marionette&lt;/a&gt; to automate the browser. It’s responsible for things like discovering which tests we need to run, setting up all the necessary prerequisites, running the tests one by one, and logging all of the results.&lt;/p&gt;
+
+&lt;p&gt;Since the test runner is essentially a program like any other, it can be broken just like any other! And since it’s used in automation to run the tests that let Firefox developers know if some new change they’ve introduced breaks something, if the test runner itself breaks, that could cause a lot of problems. So what do we do? We test it!&lt;/p&gt;
+
+&lt;p&gt;That’s where I come in. My mentor, Maja, had started writing some unit tests for the test runner before the internship began. My job is basically to add more tests. This involves:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reading &lt;a href=&quot;https://dxr.mozilla.org/mozilla-central/source/testing/marionette/harness/marionette/runner/base.py&quot;&gt;the code&lt;/a&gt; to identify things that could break and cause problems, and thus should be tested&lt;/li&gt;
+  &lt;li&gt;Writing &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1275288&quot;&gt;new&lt;/a&gt; &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1276974&quot;&gt;unit&lt;/a&gt; &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1287591#c4&quot;&gt;tests&lt;/a&gt; using Pytest&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1275269&quot;&gt;Refactoring&lt;/a&gt; the code to make it easier to test, more readable, easier to extend/change, or otherwise better&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aside from the testing side of things, another aspect of the project (which I particularly enjoy) involves improving how the runner relates to the rest of the world. For example, improving the &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1237958&quot;&gt;command line interface&lt;/a&gt; to the runner, or making sure the unit tests for the runner are producing &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=1285299&quot;&gt;logs&lt;/a&gt; that play nicely with the rest of the Mozilla ecosystem.&lt;/p&gt;
+
+&lt;h3 id=&quot;writing-stuff-down&quot;&gt;Writing stuff down&lt;/h3&gt;
+
+&lt;p&gt;As you can see, I’ve also been spending a fair bit of time writing blog &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;p&lt;/a&gt;&lt;a href=&quot;/blog/warming-up-to-mercurial/&quot;&gt;o&lt;/a&gt;&lt;a href=&quot;/blog/i-want-to-mock-with-you/&quot;&gt;s&lt;/a&gt;&lt;a href=&quot;/blog/mozilla-london-all-hands-2016/&quot;&gt;t&lt;/a&gt;&lt;a href=&quot;/blog/marionette-act-i-automation/&quot;&gt;s&lt;/a&gt; about what I’ve been learning and encountering over the course of my internship. Hopefully these have been or will be useful to others who might also be wrapping their heads around these things for the first time. But regardless, writing them has certainly been useful for me!&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-been-fun&quot;&gt;What’s been fun?&lt;/h2&gt;
+
+&lt;h3 id=&quot;learning-all-the-things&quot;&gt;Learning all the things&lt;/h3&gt;
+
+&lt;p&gt;While working with a new system or technology can often be frustrating, especially when you’re used to something similar-but-not-quite-the-same (ahem, &lt;a href=&quot;/blog/warming-up-to-mercurial/&quot;&gt;git and hg&lt;/a&gt;), I’ve found that the frustration does subside (or at least lessen) eventually, and in its place you find not only the newfound ease of working with the new thing, but also the gratification that comes with the realization: “Hey! I learned the thing!” This makes the overall experience of grappling with the learning curve fun, in my experience.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-remotely&quot;&gt;Working remotely&lt;/h3&gt;
+
+&lt;p&gt;This internship has been my first experience with a lifestyle that always attracted me: working remotely. I love the freedom of being able to work from home if I have things to take care of around the house, or at a cafe if I just really need to sip on a Chocolate Chai Soy Latte right now, or from the public library if I want some peace &amp;amp; quiet. I also loved being able to escape Germany for 2 weeks to visit my boyfriend’s family in Italy, or to work a day out of the Berlin office if I’m there for a long weekend looking at apartments. Now that I’ve moved to Berlin, I love the option of working out of the office here if I want to, or working from home or a cafe if I have things I need to take care of on the other side of the city. And because the team I’m working on is also completely distributed, there’s a great infrastructure already in place (IRC, video conferences, collaborative documents) to enable us to work in completely different countries/time zones and still feel connected.&lt;/p&gt;
+
+&lt;h3 id=&quot;helping-others-get-started-contributing&quot;&gt;Helping others get started contributing!&lt;/h3&gt;
+
+&lt;p&gt;A couple of weeks ago I got to mentor my first bug on Bugzilla, and help someone else get started contributing to the thing that I had gotten started contributing to a few months ago for my Outreachy internship. Although it was a pretty simple &amp;amp; trivial thing, it felt great to help someone else get involved, and to realize I knew the answers to a couple of their questions, meaning that I’m actually already involved! That’s the kind of thing that really makes me want to continue working with FOSS projects after my internship ends, and makes me so appreciative of initiatives like Outreachy that help bring newcomers like me into this community.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-been-hard&quot;&gt;What’s been hard?&lt;/h2&gt;
+
+&lt;h3 id=&quot;impostor-syndrome&quot;&gt;Impostor Syndrome&lt;/h3&gt;
+
+&lt;p&gt;The flip side of the learning-stuff fun is that, especially at the beginning, ye olde Impostor Syndrome gets to run amok. When I started my internship, I had the feeling that I had Absolutely No Idea what I was doing – over the past couple of months it has gotten gradually better, but I still have the feeling that I have a Shaky and Vague Idea of what I’m doing. From my communications with other current/former Outreachy interns, this seems to be par for the course, and I suppose it’s par for the course for anyone joining a new project or team for the first time. But even if it’s normal, it’s still there, and it’s still hard.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-remotely-1&quot;&gt;Working remotely&lt;/h3&gt;
+
+&lt;p&gt;As I mentioned, overall I’ve been really enjoying the remote-work lifestyle, but it does have its drawbacks. When working from home, I find it incredibly difficult to separate my working time from my not-working time, which is most often manifested in my complete inability to stop working at the end of the day. Because I don’t have to physically walk away from my computer, at the end of the day I think “Oh, I’ll just do that one last thing,” and the next thing I know the Last Thing has led to 10 other Last Things and now it’s 11:00pm and I’ve been working for 13 hours straight. Not healthy, not fun. Also, while the flexibility and freedom of not having a fixed place of work is great, moving around (e.g. from Germany to Italy to other side of Germany) can also be chaotic and stressful, and can make working (productively) more difficult – especially if you’re not sure where your next internet is going to come from. So the remote work thing is really a double-edged sword, and doing in a way that preserves both flexibility and stability is clearly a balancing act that takes some practice. I’m working on it.&lt;/p&gt;
+
+&lt;h3 id=&quot;measuring-productivity&quot;&gt;Measuring productivity&lt;/h3&gt;
+
+&lt;p&gt;Speaking of working productively, how do you know when you’re doing it? Is spending a whole day reading about mock objects, or writing a blog post, or banging your head against a build failure, or [insert activity that is not writing 1000 lines of code] productive? The nature of the Outreachy system is that every project is different, and the target outcomes (or lack thereof) are determined by the project mentor, and whether or not your work is satisfactory is entirely a matter of their judgment. Luckily, my mentor is extremely fair, open, clear, and realistic about her goals for the project. She’s also been very reassuring when I’ve expressed uncertainty about productivity, and forthcoming about her satisfaction with my progress. But I feel like this is just my good luck having a mentor who a) is awesome and b) was an Outreachy intern herself once, and can thus empathize. I do wonder how my experience would be different, especially from the standpoint of knowing whether I’m measuring up to expectations, if I were on a different project with a different mentor. Which brings me to…&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-been-helpful&quot;&gt;What’s been helpful?&lt;/h2&gt;
+
+&lt;h3 id=&quot;having-a-fantastic-mentor&quot;&gt;Having a fantastic mentor&lt;/h3&gt;
+
+&lt;p&gt;As I’ve just said, I feel really lucky to be working with my mentor, Maja. She’s been an incredible support throughout the internship, and has just made it a great experience. I’m really thankful for her for being so detailed &amp;amp; thorough in her initial conception of the project and instructions to me, and for being so consistently responsive and helpful with any of my questions or concerns. I can’t imagine a better mentor.&lt;/p&gt;
+
+&lt;h3 id=&quot;being-part-of-a-team&quot;&gt;Being part of a team&lt;/h3&gt;
+
+&lt;p&gt;“It takes a village,” or whatever they say, and my village is the Automation crew (who hang out in &lt;a href=&quot;irc://irc.mozilla.org/#automation&quot;&gt;#automation&lt;/a&gt; on IRC) within the slightly-larger village of the Engineering Productivity team (A-Team) (&lt;a href=&quot;irc://irc.mozilla.org/#ateam&quot;&gt;#ateam&lt;/a&gt;). Just like my mentor, the rest of the crew and the team have also been really friendly and helpful to me so far. If Maja’s not there, if I’m working on some adjacent component, or if I have some general question, they’ve been there for me. And while having a fantastic mentor is fantastic, having a fantastic mentor within a fantastic team is double-fantastic, because it helps with the hard things like learning new tools or working remotely (especially when your mentor is in a different time zone, but other team members are in yours). So I’m also really grateful to the whole team for taking me in and treating me as one of their own.&lt;/p&gt;
+
+&lt;h3 id=&quot;attending-the-all-hands&quot;&gt;Attending the All Hands&lt;/h3&gt;
+
+&lt;p&gt;Apparently, at some point in the last couple of years, someone at Mozilla decided to start including Outreachy interns in the semi-annual All Hands meetings. Whoever made that decision: please accept my heartfelt thanks. Being included in the &lt;a href=&quot;/blog/mozilla-london-all-hands-2016/&quot;&gt;London All Hands&lt;/a&gt; made a real difference - not only because I understood a lot about various components of the Mozilla infrastructure that had previously been confusing or unclear to me, but also because the chance to meet and socialize with team members and other Outreachy interns face-to-face was a huge help in dealing with e.g. Impostor Syndrome and the challenges of working on a distributed team. I’m so glad I was able to join that meeting, because it really helped me feel more bonded to both Mozilla as a whole and to my specific team/project, and I hope for the sake of both Mozilla and Outreachy that Outreachyees continue to be invited to such gatherings.&lt;/p&gt;
+
+&lt;h3 id=&quot;intern-solidarity&quot;&gt;Intern solidarity&lt;/h3&gt;
+
+&lt;p&gt;Early on in the internship, one of the other Mozilla Outreachy interns started a channel just for us on Mozilla’s IRC. Having a “safe space” to check in with the other interns, ask “dumb” questions, express insecurities/frustrations, and just generally support each other is immensely helpful. On top of that, several of us got to hang out in person at the London All Hands meeting, which was fantastic. Having contact with a group of other people going through more or less the same exciting/bewildering/overwelming/interesting experience you are is invaluable, especially if you suffer from Impostor Syndrome as so many of us do. So I’m so grateful to the other interns for their support and solidarity.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-up-next&quot;&gt;What’s up next?&lt;/h2&gt;
+
+&lt;p&gt;In the remaining weeks of my internship, I’m going to be continuing the work I mentioned, but instead of from a library in a small German town or a random internet connection in a small Italian town, I’ll be working mainly out of the Berlin office, and hopefully getting to know more Mozillians here. I’ll also be participating in the &lt;a href=&quot;https://wiki.mozilla.org/TechSpeakers&quot;&gt;TechSpeakers&lt;/a&gt; program, a training program from the Mozilla Reps to improve your public speaking skills so that you can go forth and spread the word about Mozilla’s awesome technologies. Finally, in the last week or two, I’ll be figuring out how to pass the baton, i.e. tie up loose ends, document what I’ve done and where I’m leaving off, and make it possible for someone else – whether existing team or community members, or perhaps the next intern – to continue making the Marionette test runner and its unit tests Super Awesome. And blogging all the while, of course. :) Looking forward to it!&lt;/p&gt;</content><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><summary>It feels like yesterday that I started my Outreachy internship, but it was actually over 2 months ago! For the last couple of weeks I’ve been on Outreachy hiatus because of EuroPython, moving from Saarbrücken to Berlin, and my mentor being on vacation. Now I’m back, with 6 weeks left in my internship! So it seems like a good moment to check in and reflect on how things have been going so far, and what’s in store for the rest of my time as an Outreachyee.</summary></entry><entry><title>testing2</title><link href="/blog/testing2/" rel="alternate" type="text/html" title="testing2" /><published>2016-08-02T00:00:00-07:00</published><updated>2016-08-02T00:00:00-07:00</updated><id>/blog/testing2</id><content type="html" xml:base="/blog/testing2/">&lt;p&gt;It feels like yesterday that I &lt;a href=&quot;/blog/outreachy-what-how-why/&quot;&gt;started my Outreachy internship&lt;/a&gt;, but it was actually over 2 months ago! For the last couple of weeks I’ve been on Outreachy hiatus because of &lt;a href=&quot;https://ep2016.europython.eu/en/&quot;&gt;EuroPython&lt;/a&gt;, moving from &lt;a href=&quot;https://goo.gl/maps/Rp7qp5Dvg5C2&quot;&gt;Saarbrücken to Berlin&lt;/a&gt;, and my mentor being on vacation. Now I’m back, with 6 weeks left in my internship! So it seems like a good moment to check in and reflect on how things have been going so far, and what’s in store for the rest of my time as an Outreachyee.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-have-i-been-up-to&quot;&gt;What have I been up to?&lt;/h2&gt;
 
@@ -1573,338 +1671,4 @@ git merge upstream/master
 
 &lt;h3 id=&quot;all-done&quot;&gt;All done!&lt;/h3&gt;
 
-&lt;p&gt;Sit back, relax, and enjoy a celebratory glass of bubbly while you bask in the glory of your open-source contribution and immaculately tidy repo. Er, I mean, get to work on that next PR!&lt;/p&gt;</content><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><summary>So, you’ve just made a contribution to an open-source project on Github by creating a pull request and having it merged by the project’s administrators! Congratulations, you’re a rockstar! …But now what do you do? How do you clean up your fork and your local copy of the repository? It’s a pretty simple process, but involves a few steps; here they are all written down in one place.</summary></entry><entry><title>testing 9</title><link href="/blog/neural-nets-for-NLP/" rel="alternate" type="text/html" title="testing 9" /><published>2016-03-16T00:00:00-07:00</published><updated>2016-03-16T00:00:00-07:00</updated><id>/blog/neural-nets-for-NLP</id><content type="html" xml:base="/blog/neural-nets-for-NLP/">&lt;p&gt;These are my notes from the tutorial “Neural Networks for Natural Language Processing”, given by &lt;a href=&quot;https://www.cs.bgu.ac.il/~yoavg/uni/&quot;&gt;Yoav Goldberg&lt;/a&gt; at the &lt;a href=&quot;http://www.dfki.de/lt/&quot;&gt;German Research Center for AI (DFKI)&lt;/a&gt; at Saarland University on March 16, 2016. Often, NNs tutorials use examples from the field of image processing, so it was really nice to hear a tutorial focused on linguistic data and analysis. Here’s an overview of the most important things I took away from the talk; check out the notes below and the &lt;a href=&quot;http://u.cs.biu.ac.il/~yogo/nnlp.pdf&quot;&gt;PDF version of the tutorial&lt;/a&gt; for more details.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Representing linguistic features&lt;/strong&gt; We need to represent our input data as vectors. Two possible representations are:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;“one-hot”&lt;/strong&gt;: each input (e.g. representing a word in a sentence) is a long, sparse binary vector, with each element representing a linguistic feature (e.g. “word is ‘DOG’”, “previous word is ‘THE’”, “part of speech is ‘NOUN’”, etc.). Under this representation, each feature is independent.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;feature embeddings&lt;/strong&gt;: each linguistic feature receives its own vector, and these vectors can be combined (e.g. by concatenation or summing) to create a single vector representing the input. This representation is preferred for NNs, because a) feature vectors are now a parameter of the model and can be trained, and b) features interdependence can be captured - similar features will have similar vectors.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Recurrent Neural Nets&lt;/strong&gt; are pretty cool. They work by maintaining a “memory” over a series of states, such that the output of a given state is determined by the memory of that state, which is determined by the input to that state and the memory of the previous state. This is recursive, but for a finite input sequence, the recursion can be “unrolled” into a finite series of states - akin to rewriting a recursive function as a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop.)
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Acceptors&lt;/strong&gt; are RNNs where the output of the final state is what matters. They make a prediction based on the entire sequence, e.g. “Given this sentence (word sequence), what is the sentiment?” or “Given this word (letter sequence), what is the Part Of Speech?”.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Transducers&lt;/strong&gt;, on the other hand, pay attention to the outputs of intermediate states as well. They predict some kind of sequence based on a history, e.g. a language model that generates the next word based on previous words. (Check out &lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;Andrej Karpathy’s “The Unreasonable Effectiveness of Recurrent Neural Networks”&lt;/a&gt; for some fun examples of this! It’s also just an awesome article.)&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Deep RNNs&lt;/strong&gt; are like multiple RNNs stacked on top of each other, where the output of a given state in a lower layer serves as input to the corresponding state in the next layer up.&lt;/li&gt;
-      &lt;li&gt;A &lt;strong&gt;Bidirectional RNN&lt;/strong&gt; is an RNN being run in both directions simultaneously. You could also think of this as two RNNs where the states of one are the “past” (…, &lt;em&gt;i&lt;/em&gt;-2, &lt;em&gt;i&lt;/em&gt;-1) and those of the other are the “future” (&lt;em&gt;i&lt;/em&gt;+1, &lt;em&gt;i&lt;/em&gt;+2, …). The outputs of the two are combined to give a prediction that takes into account the context in both directions. This is useful for e.g. capturing an infinite window around a given word, that takes into account the entire linguistic context (not just the history).&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Deep, Bidirectional RNNs&lt;/strong&gt; also exist. That’s where you have a stack of RNNs and they’re all running in both directions. Crazy. But apparently these are useful for POS tagging.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Encoder-decoder models&lt;/strong&gt;, also called sequence-to-sequence (“seq2seq”) models, use two RNNs: an “encoder” which encodes the input sequence into some intermediate representation, and a “decoder” which transduces some output sequence from the encoded representation. These have been used for e.g. machine translation and sentence simplification.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Disclaimer:&lt;/em&gt; These notes are unedited and only represent my understanding of the material - or possibly my &lt;em&gt;mis&lt;/em&gt;understanding of it! For more (and more accurate) info, read &lt;a href=&quot;http://u.cs.biu.ac.il/~yogo/nnlp.pdf&quot;&gt;Dr. Goldberg’s writing&lt;/a&gt; instead of mine!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;part-1-feed-forward-nns&quot;&gt;Part 1: Feed-Forward NNs&lt;/h2&gt;
-
-&lt;h3 id=&quot;ways-to-think-of-nns&quot;&gt;Ways to think of NNs&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modeling non-linear functions (e.g. XOR)&lt;/li&gt;
-  &lt;li&gt;Learning representations
-    &lt;ul&gt;
-      &lt;li&gt;Lower layers learn lower-level representations of the data&lt;/li&gt;
-      &lt;li&gt;Image recognition NNs visualize this&lt;/li&gt;
-      &lt;li&gt;NLP example: word embeddings - vector representations of word semantics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;non-linearities&quot;&gt;Non-linearities&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Main options: Sigmoid, tanh&lt;/li&gt;
-  &lt;li&gt;Depending on the situation, you might choose either&lt;/li&gt;
-  &lt;li&gt;He finds that tanh is usually much better to work with&lt;/li&gt;
-  &lt;li&gt;Other alternatives
-    &lt;ul&gt;
-      &lt;li&gt;“Hard tanh”
-        &lt;ul&gt;
-          &lt;li&gt;Defined as: 1 if x &amp;gt;= 1, -1 if x &amp;lt;= -1, x otherwise&lt;/li&gt;
-          &lt;li&gt;Easier to work with than tanh&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Rectified Linear Unit (ReLU) - Defined as: max(0,x)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;output-transformations&quot;&gt;Output transformations&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pass output through a “softmax layer”&lt;/li&gt;
-  &lt;li&gt;Like in a MaxEnt model&lt;/li&gt;
-  &lt;li&gt;This makes the output positive and sum to 1&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;loss-functions&quot;&gt;Loss functions&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;As in general ML, the idea is to fit a function to minimize some loss&lt;/li&gt;
-  &lt;li&gt;You have to define a loss function over the output vector and the expected output vector, to quantify the difference between them&lt;/li&gt;
-  &lt;li&gt;Usual suspects: perceptron, hinge, log-loss (aka cross-entropy loss, requires softmax beforehand)&lt;/li&gt;
-  &lt;li&gt;Hinge loss example on slides - depends on difference between the predicted score of the true class and the predicted score of the next-highest-scorest class&lt;/li&gt;
-  &lt;li&gt;Log loss/cross-entropy loss: sum up the product of each label’s score times its log&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;nlp-features-for-word-vectors&quot;&gt;NLP features for word vectors&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Traditionally, represent the word as a long, sparse binary vector (called “one-hot representation”)&lt;/li&gt;
-  &lt;li&gt;Each binary feature corresponds to a linguistic property (e.g. “word is ‘dog’”, “previous word is ‘the’”, “POS is NOUN”, etc.)&lt;/li&gt;
-  &lt;li&gt;Problems with one-hot representation:
-    &lt;ul&gt;
-      &lt;li&gt;Must manually define feature combinations (due to linearity)&lt;/li&gt;
-      &lt;li&gt;Each feature is independent of the others (e.g. “word is ‘dog’” and “word is ‘dog’ and previous word is ‘the’” have nothing to do with one another)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Better approach for NN modeling: feature embeddings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;feature-embeddings&quot;&gt;Feature embeddings&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Each feature is assigned a vectors&lt;/li&gt;
-  &lt;li&gt;Input is now a combination of feature vectors, instead of a single vectors&lt;/li&gt;
-  &lt;li&gt;Feature vectors are parameters of the model, and are trained with the network&lt;/li&gt;
-  &lt;li&gt;Similar features now receive similar vectors&lt;/li&gt;
-  &lt;li&gt;To represent a given input, you can combine feature vectors&lt;/li&gt;
-  &lt;li&gt;you can concatenate the vectors of two words, using the position to indicate which is the current word and which is previous
-    &lt;ul&gt;
-      &lt;li&gt;pro: preserve order of features&lt;/li&gt;
-      &lt;li&gt;con: encoding more features requires longer vector&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;can also sum vectors instead of concatenating them (different feature vectors must be same length)
-    &lt;ul&gt;
-      &lt;li&gt;pro: can encode any number of features without the input vector getting longer and longer&lt;/li&gt;
-      &lt;li&gt;con: “bag of features” approach, doesn’t preserve order&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Continuous Bag of Words (CBOW)
-    &lt;ul&gt;
-      &lt;li&gt;basically average the feature vectors&lt;/li&gt;
-      &lt;li&gt;popular for document classification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Features that were represented with indicator functions in a traditional linear model (e.g. word, POS) receive embedding vectors in the NN representation&lt;/li&gt;
-  &lt;li&gt;Can also embed features that are numeric, by binning them (e.g. sentence length, distance btwn words) and creating a distinct vector for each bin&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;pre-training-embeddings&quot;&gt;Pre-training embeddings&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pre-training using e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;word2vec&lt;/code&gt; and then fine-tuning during NN training (???) will generally help your model be better able to generalize for things it hasn’t seen&lt;/li&gt;
-  &lt;li&gt;Pre-training is largely responsible for the success of NNs in NLP&lt;/li&gt;
-  &lt;li&gt;How it works:
-    &lt;ul&gt;
-      &lt;li&gt;Define auxiliary task that you think is correlated with your prediction problem&lt;/li&gt;
-      &lt;li&gt;Train a model to perform this task&lt;/li&gt;
-      &lt;li&gt;Take feature representations from the model as inputs to another model&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Example: if your task is predicting a word based on its meaning, an auxiliary task might be predicting a word based on neighboring words (with the reasoning that similar words will have similar neighbors)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;neural-language-models&quot;&gt;Neural language models&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Take vectors of each word in k-length history&lt;/li&gt;
-  &lt;li&gt;Concatenate them&lt;/li&gt;
-  &lt;li&gt;Feed to Multi-Layer Perceptron (MLP)&lt;/li&gt;
-  &lt;li&gt;Feed through &lt;em&gt;softmax&lt;/em&gt; function&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Output: probability of the next word, given the k-length history&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pros:
-    &lt;ul&gt;
-      &lt;li&gt;Can use large n-grams&lt;/li&gt;
-      &lt;li&gt;Flexible conditioning contexts&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cons:
-    &lt;ul&gt;
-      &lt;li&gt;Gives good improvement in perplexity, but not in BLEU score (metric for Machine Translation)&lt;/li&gt;
-      &lt;li&gt;Slow to train because we need &lt;em&gt;softmax&lt;/em&gt; over the entire vocabulary&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Good at generalization, which is both a pro and con
-    &lt;ul&gt;
-      &lt;li&gt;seeing “red car”, “blue car”, “yellow car” in data and assigning an OK probability to “green car” is good&lt;/li&gt;
-      &lt;li&gt;seeing “black horse”, “brown horse” and thinking “blue horse” is OK is bad&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;training&quot;&gt;Training&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Based on a Computation Graph&lt;/li&gt;
-  &lt;li&gt;For each training example (or mini-batch):
-    &lt;ul&gt;
-      &lt;li&gt;Create graph to compute loss&lt;/li&gt;
-      &lt;li&gt;Compute loss (forward)&lt;/li&gt;
-      &lt;li&gt;Compute gradients (backwards)&lt;/li&gt;
-      &lt;li&gt;Update parameters
-        &lt;ul&gt;
-          &lt;li&gt;Different methods for this, simplest is Stochastic Gradient Descent (SGD)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Long list of libraries/packages including Theano, Torch, PyCNN, …&lt;/li&gt;
-  &lt;li&gt;Code using pyCNN as example (see slides)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;part-2-the-cool-stuff-rnns-and-lstms&quot;&gt;Part 2: The cool stuff (RNNs and LSTMs)&lt;/h2&gt;
-
-&lt;p&gt;We’ll approach these as sort of black-boxes, only concerning ourselves with how to use them (i.e. what is the API?), not how they work under the hood&lt;/p&gt;
-
-&lt;h3 id=&quot;recurrent-neural-networks-rnns&quot;&gt;Recurrent Neural Networks (RNNs)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input sequence: &lt;code class=&quot;highlighter-rouge&quot;&gt;x_i:x_n&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Memory: &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; (way of remembering some kind of state at each step in the network processing)&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RNN(s_0,x_1:x_n) = s_n, y_n&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;At each step, &lt;code class=&quot;highlighter-rouge&quot;&gt;s_i&lt;/code&gt; is determined based on &lt;code class=&quot;highlighter-rouge&quot;&gt;x_i&lt;/code&gt; and the previous &lt;code class=&quot;highlighter-rouge&quot;&gt;s_i-1&lt;/code&gt; by some function &lt;em&gt;R&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s_i = R(s_i-1, x_i)&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;At each step, &lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt; is determined based on the memory s by some function &lt;em&gt;O&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y_i = O(s_i)&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RNNs are recursive
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y_3 = O(s_3)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;s_i = R(s_i-1, x_i)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y_3 = O(R(s_2, x_3))&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y_3 = O(R(R(s_1, x_2), x_3))&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y_3 = O(R(R(R(s_0, x_1), x_2), x_3))&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;But for a finite input sequence, you can “unroll” the recursion into a finite series of steps (like transforming recursive function into iterative one)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What are these intermediate &lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt; vectors for?
-    &lt;ul&gt;
-      &lt;li&gt;On their own they mean nothing&lt;/li&gt;
-      &lt;li&gt;But we can train them, e.g. for loss (see below)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;lstms-and-concurrent-gates&quot;&gt;LSTMs and Concurrent Gates&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Main idea between Long Short-Term Memory (LSTM) is that you want to somehow control the way you access your memory,&lt;/li&gt;
-  &lt;li&gt;We want to selectively read from only some memory “cells” (elements in our &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; vector), and selectively write to only some of them&lt;/li&gt;
-  &lt;li&gt;The gate function controls access: if the gate function is 0, we don’t use that cell&lt;/li&gt;
-  &lt;li&gt;The LSTM is a specific combination of gates, which determines what/how much to remember&lt;/li&gt;
-  &lt;li&gt;Gated architecture helps the vanishing gradients problem (see paper by Cho)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;defining-loss-in-rnns&quot;&gt;Defining loss in RNNs&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ignoring intermediate outputs (&lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Called an “Acceptor”&lt;/li&gt;
-      &lt;li&gt;Predict something based on final output (&lt;code class=&quot;highlighter-rouge&quot;&gt;y_n&lt;/code&gt;)
-        &lt;ul&gt;
-          &lt;li&gt;e.g. given the sequence of words in a sentence, what is the sentiment?&lt;/li&gt;
-          &lt;li&gt;e.g. given the sequence of characters in a word, what is its POS?&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Calculate the loss based on the expected output&lt;/li&gt;
-      &lt;li&gt;Backpropagate the loss to all the previous states&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Using intermediate outputs (&lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Called a “Transducer”&lt;/li&gt;
-      &lt;li&gt;Predict something &amp;amp; calculate loss based on each intermediate state/outputs&lt;/li&gt;
-      &lt;li&gt;Sum the losses once you reach the end&lt;/li&gt;
-      &lt;li&gt;Backpropagate the sum through the previous states&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;rnn-language-models&quot;&gt;RNN Language Models&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Training: use Transducer&lt;/li&gt;
-  &lt;li&gt;Language generation: the output &lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt; at each intermediate state is a prediction of the next word
-    &lt;ul&gt;
-      &lt;li&gt;e.g. example of “code” generated from model trained on Linux kernel&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;fancy-rnns&quot;&gt;Fancy RNNs&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bidirectional RNN
-    &lt;ul&gt;
-      &lt;li&gt;One RNN runs left to right, another right to left&lt;/li&gt;
-      &lt;li&gt;The outputs of the two are concatenated&lt;/li&gt;
-      &lt;li&gt;Together they make a sort of infinite window around a given word, encoding both the future and the history of the word&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Deep RNN
-    &lt;ul&gt;
-      &lt;li&gt;You can stack RNNs such that the output from one layer (&lt;code class=&quot;highlighter-rouge&quot;&gt;y_i&lt;/code&gt;) is the input (&lt;code class=&quot;highlighter-rouge&quot;&gt;x_i&lt;/code&gt;) to the next layer&lt;/li&gt;
-      &lt;li&gt;This gives you a sort of grid of states, where the output of a given state in a given layer is dependent on the memory of that layer and the output of the corresponding state in the lower layer&lt;/li&gt;
-      &lt;li&gt;“Adding more layers helps”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Deep Bidirectional RNN
-    &lt;ul&gt;
-      &lt;li&gt;What you think it is - a combination of the two&lt;/li&gt;
-      &lt;li&gt;Each layer of the deep RNN is running in both directions&lt;/li&gt;
-      &lt;li&gt;Useful for e.g. POS tagging&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;encoder-decoder-seq2seq-models&quot;&gt;Encoder-decoder (seq2seq) models&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;One RNN (the encoder RNN) encodes the input, Another (the decoder RNN) transduces something back from the encoded input&lt;/li&gt;
-  &lt;li&gt;e.g. for sentence simplification:
-    &lt;ul&gt;
-      &lt;li&gt;Encode a sentence&lt;/li&gt;
-      &lt;li&gt;Decode a sequence of drop/keep decisions&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;e.g. for MT:
-    &lt;ul&gt;
-      &lt;li&gt;Encode an English sentence&lt;/li&gt;
-      &lt;li&gt;Decode into a French sentence&lt;/li&gt;
-      &lt;li&gt;See “Sequence to Sequence Learning with Neural Networks” paper by Google folks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;e.g. for automatic email responses
-    &lt;ul&gt;
-      &lt;li&gt;Encode an email, decode a short response&lt;/li&gt;
-      &lt;li&gt;Used by Google Inbox: see “Computer, respond to this email” on Google Research Blog (Nov 3, 2015)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;e.g. Autoencoder
-    &lt;ul&gt;
-      &lt;li&gt;Encode an English sentence, then decode it (basically re-generating the sentence)&lt;/li&gt;
-      &lt;li&gt;This may seem useless, but the encoded representation can be seen as a generic representation of the sentence content, which you could use for other things (…?)&lt;/li&gt;
-      &lt;li&gt;Some folks are working on deciphering what information is contained in the encoded vector&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><summary>These are my notes from the tutorial “Neural Networks for Natural Language Processing”, given by Yoav Goldberg at the German Research Center for AI (DFKI) at Saarland University on March 16, 2016. Often, NNs tutorials use examples from the field of image processing, so it was really nice to hear a tutorial focused on linguistic data and analysis. Here’s an overview of the most important things I took away from the talk; check out the notes below and the PDF version of the tutorial for more details.</summary></entry></feed>
+&lt;p&gt;Sit back, relax, and enjoy a celebratory glass of bubbly while you bask in the glory of your open-source contribution and immaculately tidy repo. Er, I mean, get to work on that next PR!&lt;/p&gt;</content><author><name>Valentin Antonio Bautista</name><email>vale.residencia@gmail.com</email></author><summary>So, you’ve just made a contribution to an open-source project on Github by creating a pull request and having it merged by the project’s administrators! Congratulations, you’re a rockstar! …But now what do you do? How do you clean up your fork and your local copy of the repository? It’s a pretty simple process, but involves a few steps; here they are all written down in one place.</summary></entry></feed>
