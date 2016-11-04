@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comic-inspired pairing"
+title: "testing 12"
 ---
 
 Today at the [Recurse Center](http://www.recurse.com), [Shad](https://github.com/Shadhopson) and I both had a spare half-hour, so we decided to do a little [pair programming](https://en.wikipedia.org/wiki/Pair_programming). (Pairing is a common occurrence at RC; it's one way Recursers take advantage of each others' experience, curiosity, and energy. And it's so much fun!)

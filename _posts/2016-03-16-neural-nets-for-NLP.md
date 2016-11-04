@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes from 'Neural Networks for NLP'"
+title: "testing 9"
 ---
 
 These are my notes from the tutorial "Neural Networks for Natural Language Processing", given by [Yoav Goldberg](https://www.cs.bgu.ac.il/~yoavg/uni/) at the [German Research Center for AI (DFKI)](http://www.dfki.de/lt/) at Saarland University on March 16, 2016. Often, NNs tutorials use examples from the field of image processing, so it was really nice to hear a tutorial focused on linguistic data and analysis. Here's an overview of the most important things I took away from the talk; check out the notes below and the [PDF version of the tutorial](http://u.cs.biu.ac.il/~yogo/nnlp.pdf) for more details.

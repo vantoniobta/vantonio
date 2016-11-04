@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My pull request was merged! Now what?
+title: testing 8
 ---
 
 So, you've just made a contribution to an open-source project on Github by creating a pull request and having it merged by the project's administrators! Congratulations, you're a rockstar! ...But now what do you do? How do you clean up your fork and your local copy of the repository? It's a pretty simple process, but involves a few steps; here they are all written down in one place.
