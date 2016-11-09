@@ -249,19 +249,65 @@ There’s built-in animation support, Canvas can be serialized to JSON or SVG, a
 
 </code></pre>
 </div>
-
 <blockquote>
   <p><a href="http://codepen.io/vantonio/pen/eBpYMG"><code class="highlighter-rouge">demo</code></a></p>
 </blockquote>
 
-<h2 id="how-clone-object-">How clone object ?</h2>
+<h2 id="how-clone-object-in-canvas">How clone object in canvas?</h2>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">hello</span><span class="p">(){</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ok'</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>vantonio<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;h3&gt;</span>canvas in html5 using fabric.js <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>&gt;
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"fabric.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"c1"</span><span class="nt">&gt;</span>clonar objecto<span class="nt">&lt;/button&gt;&lt;br&gt;&lt;br&gt;</span>
+<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"canvas"</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"300"</span> <span class="na">style=</span><span class="s">"border:1px solid #d3d3d3;"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Canvas</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">);</span>
+<span class="c1">//agregar elementos a la lona</span>
+<span class="kd">var</span> <span class="nx">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Circle</span><span class="p">({</span>
+           <span class="na">radius</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> 
+           <span class="na">fill</span><span class="p">:</span> <span class="s1">'red'</span><span class="p">,</span> 
+           <span class="na">left</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> 
+           <span class="na">top</span><span class="p">:</span> <span class="mi">100</span>
+           <span class="p">});</span>
+    <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">circle</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">square</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">Rect</span><span class="p">({</span>
+           <span class="na">left</span><span class="p">:</span> <span class="mi">130</span><span class="p">,</span> 
+           <span class="na">top</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span>
+           <span class="na">fill</span><span class="p">:</span> <span class="s1">'green'</span><span class="p">,</span>
+           <span class="na">width</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+           <span class="na">height</span><span class="p">:</span> <span class="mi">80</span>
+           <span class="p">});</span>
+    <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">square</span><span class="p">);</span>  
+    <span class="nx">canvas</span><span class="p">.</span><span class="nx">renderAll</span><span class="p">();</span>
+
+<span class="c1">//evento del botón</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#c1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getActiveObject</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">actObj</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getActiveObject</span><span class="p">();</span>  
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'objecto clonado..'</span><span class="o">+</span><span class="nx">actObj</span><span class="p">);</span>      
+            <span class="kd">var</span> <span class="nx">clone</span> <span class="o">=</span> <span class="nx">fabric</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">object</span><span class="p">.</span><span class="nx">clone</span><span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getActiveObject</span><span class="p">());</span>
+            <span class="nx">clone</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span><span class="na">left</span><span class="p">:</span> <span class="nx">actObj</span><span class="p">.</span><span class="nx">left</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span><span class="na">top</span><span class="p">:</span> <span class="nx">actObj</span><span class="p">.</span><span class="nx">top</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">});</span>
+            <span class="nx">clone</span><span class="p">.</span><span class="nx">setCoords</span><span class="p">();</span>
+            <span class="nx">canvas</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">clone</span><span class="p">);</span> 
+            <span class="nx">canvas</span><span class="p">.</span><span class="nx">renderAll</span><span class="p">();</span>
+      <span class="p">}</span>
+ <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 
 </code></pre>
 </div>
+
+<blockquote>
+  <p><a href="http://codepen.io/vantonio/pen/BQoyYd"><code class="highlighter-rouge">demo</code></a></p>
+</blockquote>
 
 <hr />
 
