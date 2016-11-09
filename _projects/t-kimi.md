@@ -1,12 +1,10 @@
 ---
-title: "Kimi"
-tagline: "A toy programming language that keeps it minimal"
-website: "https://github.com/vakila/kimi"
-skills: ["Python", "TDD"]
+title: "Magento"
+tagline: "open source"
+website: "https://github.com/vantoniobta/magento"
+skills: ["PHP", "JS"]
 ---
 
-Kimi ("Keep It MInimal") is a lisp-like toy programming language 
-I created to learn more about programming languages and interpreters. 
-Its interpreter was built in Python 3 using Test-Driven Development.
-Kimi is a small, elegant language with a minimal set of features 
-(see the [Readme](https://github.com/vakila/kimi) for more details).
+Magento is the most popular commerce platform in the world,
+with more than 250,000 merchants around the globe selling more and driving innovation.
+Just check out our customer stories to find out how the Magento Advantage really works.
