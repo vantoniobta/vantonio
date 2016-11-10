@@ -19,6 +19,7 @@ baseurl:
 images:         '/img'
 pdfs:           '/pdf'
 
+
 author:
   name:           'Valentin Antonio Bautista'
   url:             valentin.github.io
