@@ -28,7 +28,6 @@ function getNextColorClass() {
     return nextClass;
     //chosenColor = nextClass;
 }
-
 function updateColor() {
     var nextClass = getNextColorClass();
     document.body.className = nextClass;
