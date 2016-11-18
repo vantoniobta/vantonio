@@ -11,7 +11,7 @@
 
   <title>
     
-      testing2 &middot; Valentin Antonio Bautista
+      create simple server in Nodejs &middot; Valentin Antonio Bautista
     
   </title>
 
@@ -112,15 +112,35 @@
     
     <div class="content container">
       <div class="post">
-  <h1 class="post-title"><p>testing2</p>
+  <h1 class="post-title"><p>create simple server in Nodejs</p>
 </h1>
   
   <span class="post-date">02 Aug 2016</span>
   <p>Johnny-Five is the JavaScript Robotics &amp; IoT Platform. Released by Bocoup in 2012, Johnny-Five is maintained by a community of passionate software developers and hardware engineers. Over 75 developers have made contributions towards building a robust, extensible and composable ecosystem</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">hello</span><span class="p">(){</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'ok'</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">var</span> <span class="nx">http</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">fs</span>    <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span>   <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"url"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"path"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">port</span>  <span class="o">=</span> <span class="mi">9000</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">file</span>   <span class="o">=</span> <span class="s1">'index.html'</span><span class="p">;</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+	 <span class="k">try</span><span class="p">{</span>
+	 <span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">).</span><span class="nx">pathname</span>
+	<span class="p">,</span> <span class="nx">src</span>    <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">cwd</span><span class="p">(),</span> <span class="nx">uri</span><span class="p">);</span>	 
+	  <span class="nx">src</span>    <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">statSync</span><span class="p">(</span><span class="nx">src</span><span class="p">).</span><span class="nx">isDirectory</span><span class="p">()</span> <span class="p">?</span> <span class="nx">src</span><span class="o">+</span><span class="s1">'/'</span><span class="o">+</span><span class="nx">file</span> <span class="p">:</span> <span class="s1">'/'</span><span class="o">+</span><span class="nx">src</span> <span class="p">;</span>	
+	    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'/'</span><span class="o">+</span><span class="nx">src</span><span class="p">);</span>
+	 	<span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span><span class="s1">'binary'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">){</span>
+			<span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+		    <span class="nx">res</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">'binary'</span><span class="p">);</span> 
+		    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+		<span class="p">});</span>
+	 <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+	 	<span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+	 <span class="p">}</span>	
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Server running at '</span> <span class="o">+</span> <span class="nx">port</span><span class="p">);</span>
 
 </code></pre>
 </div>

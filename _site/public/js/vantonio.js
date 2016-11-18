@@ -12,7 +12,6 @@ function getNextColorClass() {
                 //  '0e', // Magenta
                   //'0f', // Brown
     ];
-
     var currentClass = document.body.className
     var currentColor = currentClass.slice(-2);
     var currentIndex = colors.indexOf(currentColor); // -1 if no color class
